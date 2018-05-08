@@ -8,29 +8,37 @@ namespace Kurs
 {
     class DigitalTime
     {
-        public static string GetFullTime()
+        public static string GetLongTime(DateTime t)
         {
-            if (DateTime.Now.Hour < 10)
-                if (DateTime.Now.Minute < 10)
-                    if (DateTime.Now.Second < 10)
-                        return "0" + DateTime.Now.Hour + ":0" + DateTime.Now.Minute + "0:" + DateTime.Now.Second;
-                    else return "0" + DateTime.Now.Hour + ":0" + DateTime.Now.Minute + ":" + DateTime.Now.Second;
-                else
-                    if (DateTime.Now.Second < 10)
-                        return "0" + DateTime.Now.Hour + ":" + DateTime.Now.Minute + "0:" + DateTime.Now.Second;
-                    else
-                        return "0" + DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second;
+            string timeString = "";
+            if (t.Hour < 10)
+                timeString += "0" + t.Hour;
             else
-                if (DateTime.Now.Minute < 10)
-                if (DateTime.Now.Second < 10)
-                    return DateTime.Now.Hour + ":0" + DateTime.Now.Minute + "0:" + DateTime.Now.Second;
-                else
-                    return "0" + DateTime.Now.Hour + ":0" + DateTime.Now.Minute + ":" + DateTime.Now.Second;
+                timeString += t.Hour;
+            if (t.Minute < 10)
+                timeString += ":0" + t.Minute;
             else
-                    if (DateTime.Now.Second < 10)
-                        return DateTime.Now.Hour + ":" + DateTime.Now.Minute + "0:" + DateTime.Now.Second;
-                    else
-                        return DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second;
+                timeString += ":" + t.Minute;
+            if (t.Second<10)
+                timeString += ":0" + t.Second;
+            else
+                timeString += ":" + t.Second;
+            return timeString;
         }
+
+        public static string GetSmallTime(DateTime t)
+        {
+            string timeString = "";
+            if (t.Hour < 10)
+                timeString += "0" + t.Hour;
+            else
+                timeString += t.Hour;
+            if (t.Minute < 10)
+                timeString += ":0" + t.Minute;
+            else
+                timeString += ":" + t.Minute;
+            return timeString;
+        }
+
     }
 }

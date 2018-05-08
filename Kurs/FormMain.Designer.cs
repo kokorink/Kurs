@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonAddNote = new System.Windows.Forms.Button();
+            this.buttonReport = new System.Windows.Forms.Button();
+            this.buttonAddAlarm = new System.Windows.Forms.Button();
             this.timerTime = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
@@ -42,32 +42,33 @@
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
             // 
-            // button1
+            // buttonAddNote
             // 
-            this.button1.Location = new System.Drawing.Point(0, 175);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(164, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Добавить напоминание";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAddNote.Location = new System.Drawing.Point(0, 175);
+            this.buttonAddNote.Name = "buttonAddNote";
+            this.buttonAddNote.Size = new System.Drawing.Size(164, 23);
+            this.buttonAddNote.TabIndex = 1;
+            this.buttonAddNote.Text = "Добавить напоминание";
+            this.buttonAddNote.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonReport
             // 
-            this.button2.Location = new System.Drawing.Point(0, 204);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Отчёт";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonReport.Location = new System.Drawing.Point(0, 204);
+            this.buttonReport.Name = "buttonReport";
+            this.buttonReport.Size = new System.Drawing.Size(164, 23);
+            this.buttonReport.TabIndex = 1;
+            this.buttonReport.Text = "Отчёт";
+            this.buttonReport.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // buttonAddAlarm
             // 
-            this.button3.Location = new System.Drawing.Point(0, 233);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(164, 23);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Установить будильник";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonAddAlarm.Location = new System.Drawing.Point(0, 233);
+            this.buttonAddAlarm.Name = "buttonAddAlarm";
+            this.buttonAddAlarm.Size = new System.Drawing.Size(164, 23);
+            this.buttonAddAlarm.TabIndex = 1;
+            this.buttonAddAlarm.Text = "Установить будильник";
+            this.buttonAddAlarm.UseVisualStyleBackColor = true;
+            this.buttonAddAlarm.Click += new System.EventHandler(this.buttonAddAlarm_Click);
             // 
             // timerTime
             // 
@@ -78,9 +79,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 361);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonAddAlarm);
+            this.Controls.Add(this.buttonReport);
+            this.Controls.Add(this.buttonAddNote);
             this.Controls.Add(this.monthCalendar1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -93,10 +94,10 @@
         #endregion
 
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonAddNote;
+        private System.Windows.Forms.Button buttonReport;
         private System.Windows.Forms.Timer timerTime;
+        public System.Windows.Forms.Button buttonAddAlarm;
     }
 }
 

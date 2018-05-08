@@ -26,7 +26,18 @@ namespace Kurs
 
         private void timerTime_Tick(object sender, EventArgs e)
         {
-            Text = "Текущее время: " + DigitalTime.GetFullTime();
+            Text = "Текущее время: " + DigitalTime.GetLongTime(DateTime.Now);
         }
+
+        private void buttonAddAlarm_Click(object sender, EventArgs e)
+        {
+            FormAddAlarm f = new FormAddAlarm();
+
+            f.ShowDialog();
+        }
+
+      
+
+
     }
 }
