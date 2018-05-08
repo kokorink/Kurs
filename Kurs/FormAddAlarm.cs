@@ -27,5 +27,11 @@ namespace Kurs
             alm.StartAlarm();
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Alarm.Stop();
+            this.Close();
+        }
     }
 }

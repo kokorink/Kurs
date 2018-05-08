@@ -38,35 +38,37 @@
             // 
             // monthCalendar1
             // 
+            this.monthCalendar1.BackColor = System.Drawing.SystemColors.Control;
+            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(3, 1);
             this.monthCalendar1.Location = new System.Drawing.Point(0, 0);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
             // 
             // buttonAddNote
             // 
-            this.buttonAddNote.Location = new System.Drawing.Point(0, 175);
+            this.buttonAddNote.Location = new System.Drawing.Point(12, 175);
             this.buttonAddNote.Name = "buttonAddNote";
-            this.buttonAddNote.Size = new System.Drawing.Size(164, 23);
+            this.buttonAddNote.Size = new System.Drawing.Size(152, 23);
             this.buttonAddNote.TabIndex = 1;
-            this.buttonAddNote.Text = "Добавить напоминание";
+            this.buttonAddNote.Text = "Напоминание";
             this.buttonAddNote.UseVisualStyleBackColor = true;
             // 
             // buttonReport
             // 
-            this.buttonReport.Location = new System.Drawing.Point(0, 204);
+            this.buttonReport.Location = new System.Drawing.Point(175, 175);
             this.buttonReport.Name = "buttonReport";
-            this.buttonReport.Size = new System.Drawing.Size(164, 23);
+            this.buttonReport.Size = new System.Drawing.Size(152, 23);
             this.buttonReport.TabIndex = 1;
             this.buttonReport.Text = "Отчёт";
             this.buttonReport.UseVisualStyleBackColor = true;
             // 
             // buttonAddAlarm
             // 
-            this.buttonAddAlarm.Location = new System.Drawing.Point(0, 233);
+            this.buttonAddAlarm.Location = new System.Drawing.Point(338, 175);
             this.buttonAddAlarm.Name = "buttonAddAlarm";
-            this.buttonAddAlarm.Size = new System.Drawing.Size(164, 23);
+            this.buttonAddAlarm.Size = new System.Drawing.Size(152, 23);
             this.buttonAddAlarm.TabIndex = 1;
-            this.buttonAddAlarm.Text = "Установить будильник";
+            this.buttonAddAlarm.Text = "Будильник";
             this.buttonAddAlarm.UseVisualStyleBackColor = true;
             this.buttonAddAlarm.Click += new System.EventHandler(this.buttonAddAlarm_Click);
             // 
@@ -78,7 +80,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 361);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(500, 207);
             this.Controls.Add(this.buttonAddAlarm);
             this.Controls.Add(this.buttonReport);
             this.Controls.Add(this.buttonAddNote);
@@ -87,6 +90,7 @@
             this.MinimizeBox = false;
             this.Name = "FormMain";
             this.ShowIcon = false;
+            this.Text = "Календарь";
             this.ResumeLayout(false);
 
         }
